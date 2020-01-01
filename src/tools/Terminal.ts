@@ -61,4 +61,4 @@ class Terminal {
 
 };
 
-export default new Terminal();
+export default Terminal;
