@@ -7,6 +7,7 @@ const inquirer = require('inquirer');
 
 const CLI = require('clui');
 const Spinner = CLI.Spinner;
+let count = 0;
 
 class Terminal {
     defaultColor: Color;
@@ -45,6 +46,10 @@ class Terminal {
 
     async checkbox(questions: Checkbox[]): Promise<any> {
         return await inquirer.prompt(questions);
+    }
+
+    static __counter() {
+        count++;
     }
 
     loading(text: string) {
